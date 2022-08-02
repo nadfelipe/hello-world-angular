@@ -1,0 +1,13 @@
+<div class="todos">
+    <form (submit)="addTodo(inputRef)">
+        <input #inputRef type="text" name="inputTodo" placeholder="Adicione uma tarefa..." class="todo-input" [(ngModel)]="inputTodo" />
+        <input type="submit" value="Adicionar" class="todo-submit {{ !inputTodo ? 'disabled' : ''  }}" />
+    </form>
+    <div *ngFor="let todo of todos; let i = index;" class="todo {{ todo.completed ? 'done' : ''}}">
+        <div class="todo-content">                
+            <p class="id">{{ i + 1 }}</p>
+            <p class="content" (click)="toogleDone(i)">{{ todo.content }}</p>
+        </div>
+        <button class="delete" (click)="deleteTodo(i)">Deletar</button>
+    </div>
+</div>
