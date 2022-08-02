@@ -1,6 +1,6 @@
-# HwAngular
+# Hello World Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+This is my first project with Angular, built from a [tutorial](https://youtu.be/i7KaVFOXNUQ) by [@TylerPottsDev](https://github.com/TylerPottsDev). It was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
 ## Development server
 

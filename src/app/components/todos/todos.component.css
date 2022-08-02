@@ -17,21 +17,33 @@
 
 .todo-content .content {
 	margin-left: 5px;
+	user-select: none;
 }
 
 .todo.done .content {
 	text-decoration: line-through;
 }
 
+.todo-content .content:hover {
+	cursor: pointer;
+}
+
+.todos form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .todo-input {
 	display: block;
-	width: 100%;
+	width: 95%;
 	padding: 10px 15px;
 	appearance: none;
-	border: none;
+	border: solid 2px #7c7c7c;
+	border-radius: 5px;
 	background-color: #F3F3F3;
 	margin-top: 15px;
-	font-size: 20px;
+	font-size: 1em;
 	outline: none;
 }
 
@@ -50,8 +62,8 @@
 	margin: 15px auto;
 
 	padding: 10px 15px;
-	font-size: 18px;
-	font-weight: 700;
+	font-size: 1.2em;
+	font-weight: 600;
 }
 
 .todo-submit.disabled {
@@ -67,8 +79,13 @@
 	background: none;
 	border-radius: 5px;
 
-	background-color: #fe4848;
+	background-color: #FE4880;
 	color: #FFF;
+	opacity: .5;
 
 	padding: .5rem;
+}
+
+.delete:hover{
+	opacity: 1;
 }
