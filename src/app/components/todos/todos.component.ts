@@ -17,6 +17,10 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
     this.todos = [
+      {
+        content: "teste",
+        completed: false
+      }
     ]
   }
 

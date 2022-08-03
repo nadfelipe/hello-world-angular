@@ -4,10 +4,11 @@
         <input type="submit" value="Adicionar" class="todo-submit {{ !inputTodo ? 'disabled' : ''  }}" />
     </form>
     <div *ngFor="let todo of todos; let i = index;" class="todo {{ todo.completed ? 'done' : ''}}">
-        <div class="todo-content">                
-            <p class="id">{{ i + 1 }}</p>
+        <div class="todo-content">       
+            <p class="id">{{ i }}</p>
+            <input type="checkbox" class="checkbox" checked="{{ todo.completed ? 'checked' : ''}}" (click)="toogleDone(i)"/>
             <p class="content" (click)="toogleDone(i)">{{ todo.content }}</p>
         </div>
-        <button class="delete" (click)="deleteTodo(i)">Deletar</button>
+        <button class="delete" (click)="deleteTodo(i)"><mat-icon>delete</mat-icon></button>
     </div>
 </div>
