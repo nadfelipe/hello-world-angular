@@ -16,12 +16,7 @@ export class TodosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.todos = [
-      {
-        content: "teste",
-        completed: false
-      }
-    ]
+    this.todos = []
   }
 
   addTodo(el: HTMLElement) {
